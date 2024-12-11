@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="container mx-auto max-w-4xl">
     <div class="container mx-auto max-w-2xl pt-6">
-      <header class="flex justify-between items-center">
-        <div>
-          <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200">Brian Bronkhorst</NuxtLink>
+      <header class="flex justify-between items-center max-md:flex-col max-md:items-start">
+        <div class="w-full block">
+          <NuxtLink to="/" class="text-xl font-semibold pt-2 pl-1 hover:bg-gray-200 dark:hover:bg-gray-600">Brian Bronkhorst</NuxtLink>
         </div>
-        <TheHeader />
+        <Menu />
         <ClientOnly>
-          <ColorModeSelector />
+          <ColorMode />
         </ClientOnly>
 
       </header>
@@ -20,6 +20,9 @@
 </template>
 
 <script setup lang="ts">
+
+import Menu from "~/components/template/menu.vue";
+import ColorMode from "~/components/template/colorMode.vue";
 
 useHead({
   titleTemplate: '%s - Brian Bronkhorst',

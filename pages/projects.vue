@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <h2 class="text-2xl font-semibold mb-10">Projects</h2>
+  <article class="prose dark:prose-invert max-w-none">
+    <ContentDoc path="/projects" />
     <ProjectList />
-  </div>
+  </article>
 </template>
 
 <script setup lang="ts">
-import ProjectList from "~/components/project-list.vue";
+import ProjectList from "~/components/content/project-list.vue";
 </script>

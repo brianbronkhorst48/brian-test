@@ -1,7 +1,19 @@
 <template>
   <div>
     <div>
-      <h2>Content</h2>
+      <h1 class="font-extrabold text-2xl">Homepage</h1>
+      <p class="mt-4"> Welcome to my portfolio!</p>
+      <ul class="list-disc pl-5">
+        <li class="pt-2">
+          <NuxtLink to="/projects" class="p-1 hover:underline hover:dark:text-gray-100">See my projects</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/blog" class="p-1 hover:underline hover:dark:text-gray-100">See my blogs</NuxtLink>
+        </li>
+      </ul>
+      <article class="prose dark:prose-invert prose-h1:text-2xl max-w-none">
+        <ContentDoc path="/" />
+      </article>
     </div>
   </div>
 </template>
